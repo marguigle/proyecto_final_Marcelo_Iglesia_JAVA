@@ -26,11 +26,6 @@ public class Categoria {
 
     }
 
-    // public Categoria(Long id, String nombre) {
-    // this.id = id;
-    // this.nombre = nombre;
-    // }
-
     public Long getId() {
         return id;
     }

@@ -25,22 +25,22 @@ public class ArticuloController {
         return articuloService.listaArticulos();
     }
 
-    @GetMapping("/articulo/{id}")
+    @GetMapping("/articulos/{id}")
     public Articulo obtenerArticuloPorId(@PathVariable Long id) {
         return articuloService.obtenerArticuloPorId(id).orElse(null);
     }
 
-    @PostMapping("/articulo")
+    @PostMapping("/articulos")
     public Articulo guardarArticulo(@RequestBody Articulo articulo) {
         return articuloService.guardarArticulo(articulo);
     }
 
-    @PutMapping("/articulo/{id}")
+    @PutMapping("/articulos/{id}")
     public Articulo actualizasArticulo(@PathVariable Long id, @RequestBody Articulo articulo) {
         return articuloService.actualizasArticulo(id, articulo);
     }
 
-    @DeleteMapping("/articulo/{id}")
+    @DeleteMapping("/articulos/{id}")
     public void eliminarArticulo(@PathVariable Long id) {
         articuloService.eliminarArticulo(id);
     }

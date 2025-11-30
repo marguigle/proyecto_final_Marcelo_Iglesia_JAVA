@@ -30,13 +30,6 @@ public class ArticuloServiceImp implements ArticuloService {
         return articuloRepository.findById(id);
     }
 
-    // @Override
-    // public Articulo guardarArticulo(Articulo articulo) {
-
-    // return articuloRepository.save(articulo);
-
-    // }
-
     @Override
     public Articulo guardarArticulo(Articulo articulo) {
 
@@ -53,11 +46,6 @@ public class ArticuloServiceImp implements ArticuloService {
         return articuloRepository.save(articulo);
     }
 
-    // @Override
-    // public Articulo actualizasArticulo(Long id, Articulo articulo) {
-    // articulo.setId(id);
-    // return articuloRepository.save(articulo);
-    // }
     @Override
     public Articulo actualizasArticulo(Long id, Articulo articulo) {
 

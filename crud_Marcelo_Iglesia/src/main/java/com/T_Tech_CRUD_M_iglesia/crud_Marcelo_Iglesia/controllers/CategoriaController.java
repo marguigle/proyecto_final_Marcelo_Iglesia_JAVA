@@ -28,22 +28,22 @@ public class CategoriaController {
         return categoriaService.listarCategorias();
     };
 
-    @GetMapping("categoria/{id}")
+    @GetMapping("categorias/{id}")
     public Categoria obtenerCategoriaPorId(@PathVariable Long id) {
         return categoriaService.obtenerCategoriaPorId(id).orElse(null);
     };
 
-    @PostMapping("categoria")
+    @PostMapping("categorias")
     public Categoria guardarCategoria(@RequestBody Categoria categoria) {
         return categoriaService.guardarCategoria(categoria);
     }
 
-    @PutMapping("categoria/{id}")
+    @PutMapping("categorias/{id}")
     public Categoria actualizarCategoria(@PathVariable Long id, Categoria categoria) {
         return categoriaService.actualizarCategoria(id, categoria);
     }
 
-    @DeleteMapping("categoria/{id}")
+    @DeleteMapping("categorias/{id}")
     public void eliminarCategoria(@PathVariable Long id) {
         categoriaService.eliminarCategoria(id);
     }

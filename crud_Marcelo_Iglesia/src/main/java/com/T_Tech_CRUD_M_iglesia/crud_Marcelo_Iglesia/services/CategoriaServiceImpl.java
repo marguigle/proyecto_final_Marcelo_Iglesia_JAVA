@@ -45,6 +45,12 @@ public class CategoriaServiceImpl implements CategoriaService {
 
     @Override
     public void eliminarCategoria(Long id) {
+        Categoria categoria = categoriaRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Categoría no encontrada"));
+
+        if (categoria.getArticulos() != null && !categoria.getArticulos().isEmpty()) {
+            throw new RuntimeException("No se puede eliminar la categoría porque tiene artículos asociados");
+        }
         categoriaRepository.deleteById(id);
 
     }

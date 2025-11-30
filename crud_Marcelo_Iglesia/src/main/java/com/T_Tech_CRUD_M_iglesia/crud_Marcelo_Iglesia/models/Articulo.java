@@ -15,7 +15,7 @@ public class Articulo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nombre;
-    private int precio;
+    private Double precio;
 
     @ManyToOne
     @JoinColumn(name = "categoria_id")
@@ -24,18 +24,11 @@ public class Articulo {
     public Articulo() {
     }
 
-    // public Articulo(Long id, String nombre, int precio, Categoria categoria) {
-    // this.id = id;
-    // this.nombre = nombre;
-    // this.precio = precio;
-    // this.categoria = categoria;
-    // }
-
-    public int getPrecio() {
+    public Double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(Double precio) {
         this.precio = precio;
     }
 
